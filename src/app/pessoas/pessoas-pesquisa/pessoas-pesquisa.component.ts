@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -16,9 +17,10 @@ export class PessoasPesquisaComponent implements OnInit {
     { nome: 'Paula Maria', cidade: 'Uberlândia', estado: 'MG', ativo: true }
   ];
 
-  constructor() { }
+  constructor( private titulo: Title) { }
 
   ngOnInit() {
+    this.titulo.setTitle('Pesquisa de pessoa');
   }
 
 }

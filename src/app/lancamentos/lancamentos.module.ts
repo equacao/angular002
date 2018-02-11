@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { SharedModule } from './../shared/shared.module';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
@@ -17,7 +18,7 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
-    CommonModule, FormsModule, SharedModule,
+    CommonModule, FormsModule, SharedModule, RouterModule,
 
     InputTextModule,
     ButtonModule,

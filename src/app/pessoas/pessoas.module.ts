@@ -17,6 +17,7 @@ import { ButtonModule } from 'primeng/components/button/button';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -24,7 +25,7 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
-    SharedModule,
+    SharedModule, RouterModule,
 
     InputMaskModule,
     InputTextModule,

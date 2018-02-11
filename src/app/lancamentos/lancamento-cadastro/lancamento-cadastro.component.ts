@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -27,10 +28,11 @@ export class LancamentoCadastroComponent implements OnInit {
 
   teste: string;
 
-  constructor() {
+  constructor( private titulo: Title) {
   }
 
   ngOnInit() {
+    this.titulo.setTitle('Cadastro de lançamento');
     this.teste = this.tipos[0].value;
   }
 

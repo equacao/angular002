@@ -9,16 +9,17 @@
             <p-column field="ativo" header="Status">
               <ng-template let-pessoa="rowData" pTemplate="body">
                 <span *ngIf="pessoa.ativo">
-                  <a pTooltip="Desativar" tooltipPosition="top" href="#">Ativo</a>
+                  <a pTooltip="Desativar" tooltipPosition="top" routerLink="ativo">Ativo</a>
                 </span>
                 <span *ngIf="!pessoa.ativo">
-                  <a pTooltip="Ativar" tooltipPosition="top" href="#">Inativo</a>
+                  <a pTooltip="Ativar" tooltipPosition="top" routerLink="inativo">Inativo</a>
                 </span>
               </ng-template>
             </p-column>
             <p-column styleClass="col-acoes">
-              <ng-template pTemplate="body">
-                  <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+              <ng-template pTemplate="body" let-pessoa="rowData">
+                  <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"
+                    [routerLink]="['/pessoas', pessoa.nome]"></a>
                   <button pButton icon="fa-trash" pTooltip="Excluir" tooltipPosition="top"></button>
               </ng-template>
             </p-column>

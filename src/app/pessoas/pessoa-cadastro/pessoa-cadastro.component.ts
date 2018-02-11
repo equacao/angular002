@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PessoaCadastroComponent implements OnInit {
 
-  constructor() { }
+  constructor( private titulo: Title) { }
 
   ngOnInit() {
+    this.titulo.setTitle('Cadastro de pessoa');
   }
 
 }

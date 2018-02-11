@@ -21,8 +21,9 @@
             </ng-template>
           </p-column>
           <p-column styleClass="col-acoes">
-            <ng-template pTemplate="body">
-                <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+            <ng-template pTemplate="body"  let-lanc="rowData">
+                <a pButton icon="fa-pencil" pTooltip="Editar" tooltipPosition="top"
+                  [routerLink]="['/lancamentos', lanc.valor]"></a>
                 <button pButton icon="fa-trash" pTooltip="Excluir" tooltipPosition="top"></button>
             </ng-template>
           </p-column>

@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-lancamentos-pesquisa',
@@ -25,9 +26,13 @@ export class LancamentosPesquisaComponent implements OnInit {
       dataPagamento: null, valor: 180, pessoa: 'Academia Top' }
   ];
 
-  constructor() { }
+  constructor(
+    private title: Title
+  ) {
+  }
 
   ngOnInit() {
+    this.title.setTitle('Pesquisa de lançamentos');
   }
 
 }
